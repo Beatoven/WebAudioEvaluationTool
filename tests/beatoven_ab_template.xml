@@ -1,3 +1,343 @@
-<?xml version="1.0" encoding="ISO-8859-1"?><waet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test-schema.xsd"><setup interface="AB" projectReturn="" returnURL="" randomiseOrder="true" poolSize="1" loudness="-23" crossFade="0" randomiseAxisOrder="false" preSilence="0" postSilence="0" playOne="true" minNumberPlays="0"><exitText>Thank you.</exitText><calibration checkFrequencies="false" checkLevels="false" checkChannels="false"/><survey location="pre" showBackButton="true"><surveyquestion id="sessionId" mandatory="true" boxsize="normal"><statement>Please enter your name.</statement></surveyquestion><surveycheckbox id="checkboxtest" mandatory="true" min="0" max="NaN"><statement>Please select with which activities you have any experience (example checkbox question)</statement><option name="musician">Playing a musical instrument</option><option name="soundengineer">Recording or mixing audio</option><option name="developer">Developing audio software</option><option name="hwdesigner">Designing or building audio hardware</option><option name="researcher">Research in the field of audio</option></surveycheckbox><surveystatement id="test-intro"><statement>This is an A/B test for finding compatible samples using a feature-based method vs. a contrastive-learning strategy.
+<waet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test-schema.xsd">
+    <setup interface="AB" projectReturn="" returnURL="" randomiseOrder="true" poolSize="1" loudness="-23" crossFade="0" randomiseAxisOrder="false" preSilence="0" postSilence="0" playOne="true" minNumberPlays="0">
+        <exitText>Thank you.</exitText>
+        <calibration checkFrequencies="false" checkLevels="false" checkChannels="false" />
+        <survey location="pre" showBackButton="true">
+            <surveyquestion id="sessionId" mandatory="true" boxsize="normal">
+                <statement>Please enter your name.</statement>
+            </surveyquestion>
+            <surveycheckbox id="checkboxtest" mandatory="true" min="0" max="NaN">
+                <statement>Please select with which activities you have any experience (example
+                    checkbox question)</statement>
+                <option name="musician">Playing a musical instrument</option>
+                <option name="soundengineer">Recording or mixing audio</option>
+                <option name="developer">Developing audio software</option>
+                <option name="hwdesigner">Designing or building audio hardware</option>
+                <option name="researcher">Research in the field of audio</option>
+            </surveycheckbox>
+            <surveystatement id="test-intro">
+                <statement>This is an A/B test for finding compatible samples using a feature-based
+                    method vs. a contrastive-learning strategy.
 
-On each page, please listen to each track and select the one you prefer (A or B).</statement></surveystatement></survey><survey location="post" showBackButton="true"><surveyradio id="rating"><statement>Please rate this interface (example radio button question)</statement><option name="bad">Bad</option><option name="poor">Poor</option><option name="good">Good</option><option name="great">Great</option></surveyradio><surveystatement id="test-thank-you"><statement>Thank you for taking this listening test. Please click 'Submit' and your results will appear in the 'saves/' folder.</statement></surveystatement></survey><metric><metricenable>testTimer</metricenable><metricenable>elementTimer</metricenable><metricenable>elementInitialPosition</metricenable><metricenable>elementTracker</metricenable><metricenable>elementFlagListenedTo</metricenable><metricenable>elementFlagMoved</metricenable><metricenable>elementListenTracker</metricenable></metric><interface><interfaceoption type="show" name="playhead"/><interfaceoption type="show" name="page-count"/><interfaceoption type="show" name="volume"/><interfaceoption type="show" name="comments"/></interface></setup><page id="test-0" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0"><commentboxprefix>Comment on fragment</commentboxprefix><interface/><audioelement url="0_A.wav" id="track-0" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><audioelement url="0_B.wav" id="track-1" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-1" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="1_A.wav" id="track-2" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><audioelement url="1_B.wav" id="track-3" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-2" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="2_A.wav" id="track-4" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><audioelement url="2_B.wav" id="track-5" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-3" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-5" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="3_A.wav" id="track-6" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><audioelement url="3_B.wav" id="track-7" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-4" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="4_A.wav" id="track-8" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><audioelement url="4_B.wav" id="track-9" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-5" hostURL="eval_audio/" randomiseOrder="true" loudness="-12" label="default"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="5_A.wav" id="track-10" gain="0" type="normal"/><audioelement url="5_B.wav" id="track-11" gain="0" type="normal"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-6" hostURL="eval_audio/" randomiseOrder="true" loudness="-12" label="default"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="7_A.wav" id="track-12" gain="0" type="normal"/><audioelement url="7_B.wav" id="track-13" gain="0" type="normal"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-7" hostURL="eval_audio/" randomiseOrder="true" loudness="-12" label="default"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="8_A.wav" id="track-14" gain="0"/><audioelement url="8_B.wav" id="track-15" gain="0" type="normal"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-8" hostURL="eval_audio/" randomiseOrder="true" loudness="-12" label="default"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="9_A.wav" id="track-16" gain="0" type="normal"/><audioelement url="9_B.wav" id="track-17" gain="0" type="normal"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-9" hostURL="eval_audio/" randomiseOrder="true" loudness="-12" label="default"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="10_A.wav" id="track-18" gain="0" type="normal"/><audioelement url="10_B.wav" id="track-19" gain="0" type="normal"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page><page id="test-10" hostURL="eval_audio/" randomiseOrder="true" loudness="-12" label="default"><commentboxprefix>Comment on track</commentboxprefix><interface/><audioelement url="6_A.wav" id="track-20" gain="0"/><audioelement url="6_B.wav" id="track-21" gain="0"/><survey location="pre" showBackButton="true"/><survey location="post" showBackButton="true"/></page></waet>
+                    On each page, please listen to each track and select the one you prefer (A or
+                    B).</statement>
+            </surveystatement>
+        </survey>
+        <survey location="post" showBackButton="true">
+            <surveyradio id="rating">
+                <statement>Please rate this interface (example radio button question)</statement>
+                <option name="bad">Bad</option>
+                <option name="poor">Poor</option>
+                <option name="good">Good</option>
+                <option name="great">Great</option>
+            </surveyradio>
+            <surveystatement id="test-thank-you">
+                <statement>Thank you for taking this listening test. Please click 'Submit' and your
+                    results will saved.</statement>
+            </surveystatement>
+        </survey>
+        <metric>
+            <metricenable>testTimer</metricenable>
+            <metricenable>elementTimer</metricenable>
+            <metricenable>elementInitialPosition</metricenable>
+            <metricenable>elementTracker</metricenable>
+            <metricenable>elementFlagListenedTo</metricenable>
+            <metricenable>elementFlagMoved</metricenable>
+            <metricenable>elementListenTracker</metricenable>
+        </metric>
+        <interface>
+            <interfaceoption type="show" name="playhead" />
+            <interfaceoption type="show" name="page-count" />
+            <interfaceoption type="show" name="volume" />
+            <interfaceoption type="show" name="comments" />
+        </interface>
+    </setup>
+<page id="test-0" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="0_A.wav" id="track-0" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="0_B.wav" id="track-1" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-1" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="1_A.wav" id="track-2" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="1_B.wav" id="track-3" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-2" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="2_A.wav" id="track-4" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="2_B.wav" id="track-5" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-3" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="3_A.wav" id="track-6" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="3_B.wav" id="track-7" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-4" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="4_A.wav" id="track-8" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="4_B.wav" id="track-9" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-5" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="5_A.wav" id="track-10" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="5_B.wav" id="track-11" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-6" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="6_A.wav" id="track-12" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="6_B.wav" id="track-13" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-7" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="7_A.wav" id="track-14" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="7_B.wav" id="track-15" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-8" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="8_A.wav" id="track-16" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="8_B.wav" id="track-17" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-9" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="9_A.wav" id="track-18" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="9_B.wav" id="track-19" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-10" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="10_A.wav" id="track-20" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="10_B.wav" id="track-21" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-11" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="11_A.wav" id="track-22" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="11_B.wav" id="track-23" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-12" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="12_A.wav" id="track-24" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="12_B.wav" id="track-25" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-13" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="13_A.wav" id="track-26" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="13_B.wav" id="track-27" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-14" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="14_A.wav" id="track-28" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="14_B.wav" id="track-29" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-15" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="15_A.wav" id="track-30" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="15_B.wav" id="track-31" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-16" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="16_A.wav" id="track-32" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="16_B.wav" id="track-33" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-17" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="17_A.wav" id="track-34" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="17_B.wav" id="track-35" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-18" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="18_A.wav" id="track-36" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="18_B.wav" id="track-37" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-19" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="19_A.wav" id="track-38" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="19_B.wav" id="track-39" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-20" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="20_A.wav" id="track-40" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="20_B.wav" id="track-41" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-21" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="21_A.wav" id="track-42" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="21_B.wav" id="track-43" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-22" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="22_A.wav" id="track-44" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="22_B.wav" id="track-45" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-23" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="23_A.wav" id="track-46" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="23_B.wav" id="track-47" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-24" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="24_A.wav" id="track-48" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="24_B.wav" id="track-49" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-25" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="25_A.wav" id="track-50" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="25_B.wav" id="track-51" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-26" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="26_A.wav" id="track-52" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="26_B.wav" id="track-53" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-27" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="27_A.wav" id="track-54" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="27_B.wav" id="track-55" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-28" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="28_A.wav" id="track-56" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="28_B.wav" id="track-57" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-29" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="29_A.wav" id="track-58" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="29_B.wav" id="track-59" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-30" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="30_A.wav" id="track-60" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="30_B.wav" id="track-61" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-31" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="31_A.wav" id="track-62" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="31_B.wav" id="track-63" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-32" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="32_A.wav" id="track-64" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="32_B.wav" id="track-65" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-33" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="33_A.wav" id="track-66" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="33_B.wav" id="track-67" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-34" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="34_A.wav" id="track-68" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="34_B.wav" id="track-69" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-35" hostURL="eval_audio/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="-12" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="35_A.wav" id="track-70" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="35_B.wav" id="track-71" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+</waet>
