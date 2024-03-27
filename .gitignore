@@ -14,3 +14,6 @@ saves/*.xml
 saves/ratings/*
 saves/timelines/*
 saves/timelines_movement/*
+beatoven_data
+venv
+

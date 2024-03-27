@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<waet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="test-schema.xsd">
+    <setup interface="AB" projectReturn="" returnURL="" randomiseOrder="true" poolSize="1"
+        loudness="0" crossFade="0" randomiseAxisOrder="false" preSilence="0" postSilence="0"
+        playOne="true" minNumberPlays="0">
+        <exitText>Thank you.</exitText>
+        <calibration checkFrequencies="false" checkLevels="false" checkChannels="false" />
+        <survey location="pre" showBackButton="true">
+            <surveyquestion id="sessionId" mandatory="true" boxsize="normal">
+                <statement>Please enter your name.</statement>
+            </surveyquestion>
+            <surveycheckbox id="checkboxtest" mandatory="true" min="0" max="NaN">
+                <statement>Please select with which activities you have any experience (example
+                    checkbox question)</statement>
+                <option name="musician">Playing a musical instrument</option>
+                <option name="soundengineer">Recording or mixing audio</option>
+                <option name="developer">Developing audio software</option>
+                <option name="hwdesigner">Designing or building audio hardware</option>
+                <option name="researcher">Research in the field of audio</option>
+            </surveycheckbox>
+            <surveystatement id="test-intro">
+                <statement>This is an AB evaluation for comparing the old method vs. 
+                new method for selecting similar samples
+                
+                On each page, please listen to the reference loop and then select whether music loop A or B is more similar to it.
+                </statement>
+            </surveystatement>
+        </survey>
+        <survey location="post" showBackButton="true">
+            <surveyradio id="rating">
+                <statement>Please rate this interface (example radio button question)</statement>
+                <option name="bad">Bad</option>
+                <option name="poor">Poor</option>
+                <option name="good">Good</option>
+                <option name="great">Great</option>
+            </surveyradio>
+            <surveystatement id="test-thank-you">
+                <statement>Thank you for taking this listening test. Please click 'Submit' and your
+                    results will saved.</statement>
+            </surveystatement>
+        </survey>
+        <metric>
+            <metricenable>testTimer</metricenable>
+            <metricenable>elementTimer</metricenable>
+            <metricenable>elementInitialPosition</metricenable>
+            <metricenable>elementTracker</metricenable>
+            <metricenable>elementFlagListenedTo</metricenable>
+            <metricenable>elementFlagMoved</metricenable>
+            <metricenable>elementListenTracker</metricenable>
+        </metric>
+        <interface>
+            <interfaceoption type="show" name="playhead" />
+            <interfaceoption type="show" name="page-count" />
+            <interfaceoption type="show" name="volume" />
+            <interfaceoption type="show" name="comments" />
+        </interface>
+    </setup>
+</waet>

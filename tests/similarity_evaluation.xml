@@ -1,0 +1,325 @@
+<waet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test-schema.xsd">
+    <setup interface="AB" projectReturn="" returnURL="" randomiseOrder="true" poolSize="1" loudness="0" crossFade="0" randomiseAxisOrder="false" preSilence="0" postSilence="0" playOne="true" minNumberPlays="0">
+        <exitText>Thank you.</exitText>
+        <calibration checkFrequencies="false" checkLevels="false" checkChannels="false" />
+        <survey location="pre" showBackButton="true">
+            <surveyquestion id="sessionId" mandatory="true" boxsize="normal">
+                <statement>Please enter your name.</statement>
+            </surveyquestion>
+            <surveycheckbox id="checkboxtest" mandatory="true" min="0" max="NaN">
+                <statement>Please select with which activities you have any experience (example
+                    checkbox question)</statement>
+                <option name="musician">Playing a musical instrument</option>
+                <option name="soundengineer">Recording or mixing audio</option>
+                <option name="developer">Developing audio software</option>
+                <option name="hwdesigner">Designing or building audio hardware</option>
+                <option name="researcher">Research in the field of audio</option>
+            </surveycheckbox>
+            <surveystatement id="test-intro">
+                <statement>This is an AB evaluation for comparing the old method vs. 
+                new method for selecting similar samples
+                
+                On each page, please listen to the reference loop and then select whether music loop A or B is more similar to it.
+                </statement>
+            </surveystatement>
+        </survey>
+        <survey location="post" showBackButton="true">
+            <surveyradio id="rating">
+                <statement>Please rate this interface (example radio button question)</statement>
+                <option name="bad">Bad</option>
+                <option name="poor">Poor</option>
+                <option name="good">Good</option>
+                <option name="great">Great</option>
+            </surveyradio>
+            <surveystatement id="test-thank-you">
+                <statement>Thank you for taking this listening test. Please click 'Submit' and your
+                    results will saved.</statement>
+            </surveystatement>
+        </survey>
+        <metric>
+            <metricenable>testTimer</metricenable>
+            <metricenable>elementTimer</metricenable>
+            <metricenable>elementInitialPosition</metricenable>
+            <metricenable>elementTracker</metricenable>
+            <metricenable>elementFlagListenedTo</metricenable>
+            <metricenable>elementFlagMoved</metricenable>
+            <metricenable>elementListenTracker</metricenable>
+        </metric>
+        <interface>
+            <interfaceoption type="show" name="playhead" />
+            <interfaceoption type="show" name="page-count" />
+            <interfaceoption type="show" name="volume" />
+            <interfaceoption type="show" name="comments" />
+        </interface>
+    </setup>
+<page id="test-0" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="0_A.wav" id="track-0" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="0_B.wav" id="track-1" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="0_X.wav" id="ref-0" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-1" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="1_A.wav" id="track-2" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="1_B.wav" id="track-3" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="1_X.wav" id="ref-2" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-2" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="2_A.wav" id="track-4" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="2_B.wav" id="track-5" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="2_X.wav" id="ref-4" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-3" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="3_A.wav" id="track-6" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="3_B.wav" id="track-7" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="3_X.wav" id="ref-6" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-4" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="4_A.wav" id="track-8" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="4_B.wav" id="track-9" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="4_X.wav" id="ref-8" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-5" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="5_A.wav" id="track-10" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="5_B.wav" id="track-11" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="5_X.wav" id="ref-10" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-6" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="6_A.wav" id="track-12" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="6_B.wav" id="track-13" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="6_X.wav" id="ref-12" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-7" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="7_A.wav" id="track-14" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="7_B.wav" id="track-15" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="7_X.wav" id="ref-14" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-8" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="8_A.wav" id="track-16" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="8_B.wav" id="track-17" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="8_X.wav" id="ref-16" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-9" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="9_A.wav" id="track-18" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="9_B.wav" id="track-19" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="9_X.wav" id="ref-18" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-10" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="10_A.wav" id="track-20" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="10_B.wav" id="track-21" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="10_X.wav" id="ref-20" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-11" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="11_A.wav" id="track-22" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="11_B.wav" id="track-23" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="11_X.wav" id="ref-22" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-12" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="12_A.wav" id="track-24" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="12_B.wav" id="track-25" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="12_X.wav" id="ref-24" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-13" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="13_A.wav" id="track-26" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="13_B.wav" id="track-27" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="13_X.wav" id="ref-26" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-14" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="14_A.wav" id="track-28" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="14_B.wav" id="track-29" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="14_X.wav" id="ref-28" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-15" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="15_A.wav" id="track-30" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="15_B.wav" id="track-31" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="15_X.wav" id="ref-30" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-16" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="16_A.wav" id="track-32" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="16_B.wav" id="track-33" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="16_X.wav" id="ref-32" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-17" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="17_A.wav" id="track-34" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="17_B.wav" id="track-35" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="17_X.wav" id="ref-34" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-18" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="18_A.wav" id="track-36" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="18_B.wav" id="track-37" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="18_X.wav" id="ref-36" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-19" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="19_A.wav" id="track-38" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="19_B.wav" id="track-39" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="19_X.wav" id="ref-38" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-20" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="20_A.wav" id="track-40" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="20_B.wav" id="track-41" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="20_X.wav" id="ref-40" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-21" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="21_A.wav" id="track-42" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="21_B.wav" id="track-43" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="21_X.wav" id="ref-42" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-22" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="22_A.wav" id="track-44" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="22_B.wav" id="track-45" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="22_X.wav" id="ref-44" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-23" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="23_A.wav" id="track-46" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="23_B.wav" id="track-47" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="23_X.wav" id="ref-46" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-24" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="24_A.wav" id="track-48" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="24_B.wav" id="track-49" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="24_X.wav" id="ref-48" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-25" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="25_A.wav" id="track-50" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="25_B.wav" id="track-51" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="25_X.wav" id="ref-50" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-26" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="26_A.wav" id="track-52" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="26_B.wav" id="track-53" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="26_X.wav" id="ref-52" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-27" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="27_A.wav" id="track-54" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="27_B.wav" id="track-55" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="27_X.wav" id="ref-54" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-28" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="28_A.wav" id="track-56" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="28_B.wav" id="track-57" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="28_X.wav" id="ref-56" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+<page id="test-29" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
+    <commentboxprefix>Comment on track</commentboxprefix>
+    <interface />
+    <audioelement url="29_A.wav" id="track-58" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="29_B.wav" id="track-59" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
+    <audioelement url="29_X.wav" id="ref-58" gain="0" type="outside-reference" />
+    <survey location="pre" showBackButton="true" />
+    <survey location="post" showBackButton="true" />
+</page>
+</waet>
