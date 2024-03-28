@@ -25,7 +25,7 @@ def load_and_append_xml(xml_path, additional_xml):
 
 def generate_test_pages(num_pages, audio_path, outside_ref=False):
     xml = '<root>'  # Add a root element
-    for i in range(num_pages):
+    for i in range(1, num_pages):
         xml += f'<page id="test-{i}" hostURL="{audio_path}" randomiseOrder="true" repeatCount="0" loop="false"\n'
         xml += '    synchronous="false" loudness="0" label="default" labelStart="" poolSize="0"\n'
         xml += '    alwaysInclude="false" preSilence="0" postSilence="0" playOne="false"\n'

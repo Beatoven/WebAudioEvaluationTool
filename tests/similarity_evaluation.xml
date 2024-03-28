@@ -52,15 +52,6 @@
             <interfaceoption type="show" name="comments" />
         </interface>
     </setup>
-<page id="test-0" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
-    <commentboxprefix>Comment on track</commentboxprefix>
-    <interface />
-    <audioelement url="0_A.wav" id="track-0" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
-    <audioelement url="0_B.wav" id="track-1" gain="0" label="" type="normal" alwaysInclude="false" preSilence="0" postSilence="0" minNumberPlays="0" />
-    <audioelement url="0_X.wav" id="ref-0" gain="0" type="outside-reference" />
-    <survey location="pre" showBackButton="true" />
-    <survey location="post" showBackButton="true" />
-</page>
 <page id="test-1" hostURL="beatoven_data/similarity_test/" randomiseOrder="true" repeatCount="0" loop="false" synchronous="false" loudness="0" label="default" labelStart="" poolSize="0" alwaysInclude="false" preSilence="0" postSilence="0" playOne="false" restrictMovement="false" minNumberPlays="0">
     <commentboxprefix>Comment on track</commentboxprefix>
     <interface />
